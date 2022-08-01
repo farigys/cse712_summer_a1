@@ -69,7 +69,7 @@ def Viterbi(words):
                 transition_p = tags_df.loc[tags[-1], tag]
                 
             # muliply emission and transition probabilities
-            #emission_p = word_given_tag(word, tag)[0]/word_given_tag(word, tag)[1]
+            #emission_p = word_given_tag_emission(word, tag)[0]/word_given_tag_emission(word, tag)[1]
             emission_p = word_given_tag_emission(words[key], tag)[0]/word_given_tag_emission(words[key], tag)[1]
             state_probability = emission_p * transition_p    
             p.append(state_probability)
